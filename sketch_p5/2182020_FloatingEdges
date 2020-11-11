@@ -1,0 +1,13 @@
+s=t=50
+draw=_=>{createCanvas(R=500,R)
+rectMode(CENTER)
+for(y=0;y<=R;y+=s/2){for(x=y%s==0?0:s/2;x<=R;x+=s){
+push()
+translate(x,y)
+c=sin(norm(dist(h=R/2,h,x,y),h,0)/2+t)
+rotate(c*TAU)
+fill(0)
+stroke(abs(c)*255)
+square(0,0,S=s/2*c)
+circle(0,0,S/2)
+pop()}}t+=.02}
